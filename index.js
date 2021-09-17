@@ -179,18 +179,7 @@ client.on("messageCreate", async message => {
                         components: [bt]
                     });
                     
-                    const webhookClient = new WebhookClient({url: 'https://discord.com/api/webhooks/888427638627106867/boXrozqswIdYEss1MbUDggaGbtq5xLdbTZR27ufuY01Lj1f6ph5qgUwj2f8sw7_eEdc3'});
                     
-                    const ff = new MessageEmbed()
-                        .setTitle('NEW SETUP')
-                        .setColor(ee.color)
-                        .setDescription(`**Server Name**: \`${message.guild.name} (${message.guild.id})\`\n\n**Channel Id**: \`${message.channel.id}\``)
-                        .setFooter('LOG | Ticket-Tool', client.user.avatarURL({ dynamic: true }))
-                        .setTimestamp()
-                    
-                    webhookClient.send({
-                        embeds: [ff]
-                    });
                 } else if (interaction.customId === 'nein') {
                     interaction.message.delete()
                 }
@@ -468,11 +457,7 @@ client.on("interactionCreate", async (interaction) => {
                                         components: [msg.components[0], row2],
                                         files: [`views/tr/${interaction.guild.id}/${interaction.channel.id}/index.html`]
                                     });
-                                    const webhookClient = new WebhookClient({url: 'https://discord.com/api/webhooks/888427638627106867/boXrozqswIdYEss1MbUDggaGbtq5xLdbTZR27ufuY01Lj1f6ph5qgUwj2f8sw7_eEdc3'});
-                                    webhookClient.send({
-                                        files: [`views/tr/${interaction.guild.id}/${interaction.channel.id}/index.html`],
-                                        embeds: [embed],
-                                    })
+                                  
                                 })
                             })
                         }
