@@ -1,0 +1,33 @@
+{
+  "name": "ticket-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "color": "^4.0.1",
+    "discord.js": "^13.1.0",
+    "document": "^0.4.7",
+    "ejs": "^3.1.6",
+    "enmap": "^5.8.7",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "form-data": "^3.0.1",
+    "fs": "*",
+    "http": "*",
+    "https": "^1.0.0",
+    "jsdom": "^16.7.0",
+    "memorystore": "^1.6.6",
+    "node-fetch": "^2.6.1",
+    "officegen": "^0.6.5",
+    "passport": "^0.4.1",
+    "passport-discord": "^0.1.4",
+    "password": "^0.1.1",
+    "path": "^0.12.7",
+    "tech-tip-cyber": "^1.2.3"
+  }
+}

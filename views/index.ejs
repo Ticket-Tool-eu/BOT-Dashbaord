@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" type="image/png" href="<%= image %>" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="The Best Multi-purpose bot that suits all your needs! Moderation, Music, Games, Utilities, We cover it all!" />
+  <meta name="author" content="<%= client.user.username %>" />
+  <meta property="og:image" content="<%= image %>" />
+  <meta property="og:url" content="https://<%= client.user.username %>bot.tk" />
+  <meta name="theme-color" content="#ffd700" />
+  <title>
+    <%= client.user.username %>
+  </title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/fe5629e38b.js" crossorigin="anonymous"></script>
+</head>
+
+<body oncontextmenu="return false">
+  <header class="text-gray-400 bg-gray-900 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+        <img src="<%= image %>" width="40" height="40" />
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a href="https://ticket-tool.eu" class="mr-5 hover:text-white">Home</a>
+        <a href="/invite" class="mr-5 hover:text-white">Invite <%= client.user.username %></a>
+        <a href="/support" class="mr-5 hover:text-white">Support Server</a>
+
+      </nav>
+    </div>
+  </header>
+  <hr />
+  <section class="text-gray-400 bg-gray-900 body-font">
+    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+      <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero"
+        src="https://cdn.discordapp.com/attachments/822530198955360346/883455685495509032/tickettoollogo.png" />
+      <div class="text-center lg:w-2/3 w-full">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+          <%= client.user.username %>
+        </h1>
+        <p class="leading-relaxed mb-8">
+          The best multi-purpose bot that suits all your needs!
+        </p>
+        <div class="flex justify-center">
+          <button
+            class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+            <a href="/invite">Add To Discord</a>
+          </button>
+          <button
+            class="ml-4 inline-flex text-white bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
+            <a href="/support">Support Server</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4 text-center">
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+          <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="text-indigo-400 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+              <path d="M8 17l4 4 4-4m-4-5v9"></path>
+              <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
+            </svg>
+            <h2 class="title-font font-medium text-3xl text-white">5</h2>
+            <p class="leading-relaxed">Commands</p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+          <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="text-indigo-400 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+            </svg>
+            <h2 class="title-font font-medium text-3xl text-white">
+              <%= client.users.cache.size %>
+            </h2>
+            <p class="leading-relaxed">Users</p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+          <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="text-indigo-400 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <h2 class="title-font font-medium text-3xl text-white">
+              <%= client.guilds.cache.size %>
+            </h2>
+            <p class="leading-relaxed">Servers</p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+          <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="text-indigo-400 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+              <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path>
+            </svg>
+            <h2 class="title-font font-medium text-3xl text-white">
+              <%= client.stats.get("counter") %>
+            </h2>
+            <p class="leading-relaxed">Support Ticktes Created</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <footer class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <img src="<%= image %>" width="40" height="40" />
+        <span class="ml-3 text-xl">
+          <%= client.user.username %>
+        </span>
+      </a>
+      <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
+        Copyright © 2021. All Rights Reserved. @<%= client.user.username %>-Bot-Team
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a href="/invite" class="ml-3 text-gray-400">
+          <i class="fab fa-discord"></i>
+        </a>
+      </span>
+    </div>
+  </footer>
+  <noscript>
+    Please enable JavaScript in your browser, to view this page properly!
+  </noscript>
+</body>
+
+</html>

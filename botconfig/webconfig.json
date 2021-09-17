@@ -1,0 +1,12 @@
+{
+    "https-port": "",
+    "http-port": "",
+    "redirect-url": "",
+    "website-url": "",
+    "dashboard": {
+        "clientid": "",
+        "client-secret": "",
+        "Scopes": ["", ""],
+        "cookie-secret": ""
+    }
+}
