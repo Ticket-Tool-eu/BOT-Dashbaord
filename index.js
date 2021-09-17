@@ -179,7 +179,7 @@ client.on("messageCreate", async message => {
                         components: [bt]
                     });
 
-                    const webhookClient = new WebhookClient({ url: 'https://discord.com/api/webhooks/888427638627106867/boXrozqswIdYEss1MbUDggaGbtq5xLdbTZR27ufuY01Lj1f6ph5qgUwj2f8sw7_eEdc3' });
+                    const webhookClient = new WebhookClient({ url: 'https://discord.com/api/webhooks/id/token' });
 
                     const ff = new MessageEmbed()
                         .setTitle('NEW SETUP')
@@ -471,7 +471,7 @@ client.on("interactionCreate", async (interaction) => {
                                         components: [msg.components[0], row2],
                                         files: [`views/tr/${interaction.guild.id}/${interaction.channel.id}/index.html`]
                                     });
-                                    const webhookClient = new WebhookClient({ url: 'https://discord.com/api/webhooks/888427638627106867/boXrozqswIdYEss1MbUDggaGbtq5xLdbTZR27ufuY01Lj1f6ph5qgUwj2f8sw7_eEdc3' });
+                                    const webhookClient = new WebhookClient({ url: 'https://discord.com/api/webhooks/id/token' });
                                     webhookClient.send({
                                         files: [`views/tr/${interaction.guild.id}/${interaction.channel.id}/index.html`],
                                         embeds: [embed],
